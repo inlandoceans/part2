@@ -13,7 +13,7 @@ const Persons = ({ newSearch, persons, confirmRemove }) => {
         {personsToShow.map((person) => (
           <li key={person.name}>
             {person.name}: {person.number}{" "}
-            <button onClick={confirmRemove}>delete</button>
+            <button onClick={() => confirmRemove(person)}>delete</button>
           </li>
         ))}
       </ul>
